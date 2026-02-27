@@ -1,26 +1,27 @@
-import { Search } from 'lucide-react';
+import { Search, MapPin } from 'lucide-react';
 
 export default function HeroSection({ rechercheVille, onRechercheChange }) {
   return (
-    <section className="bg-white py-20 px-4 text-center border-b border-gray-100">
-      <p className="text-sm font-semibold tracking-widest uppercase text-[#2D5016] mb-4">
-        France entière
+    <section className="bg-[rgb(62,206,198)] py-20 px-4 text-center border-b border-white/10">
+      <p className="text-sm font-medium tracking-widest uppercase text-white/70 mb-4 flex items-center justify-center gap-1.5">
+        <MapPin className="w-4 h-4" />
+        Partout en France
       </p>
-      <h1 className="text-4xl md:text-6xl font-bold text-[#111111] mb-6 leading-tight">
+      <h1 className="text-4xl md:text-6xl font-medium text-white mb-6 leading-tight">
         Trouvez votre<br />cercle de parole
       </h1>
-      <p className="text-lg text-gray-500 mb-10 max-w-xl mx-auto">
+      <p className="text-lg font-light text-white/80 mb-10 max-w-xl mx-auto">
         Des espaces sécurisés animés par des thérapeutes certifiés,<br className="hidden md:block" />
         pour hommes, femmes et mixtes, partout en France.
       </p>
       <div className="max-w-md mx-auto relative">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#14171A]/30 w-5 h-5" />
         <input
           type="text"
           placeholder="Rechercher une ville..."
           value={rechercheVille}
           onChange={(e) => onRechercheChange(e.target.value)}
-          className="w-full pl-12 pr-4 py-4 border-2 border-[#111111] rounded-none text-[#111111] placeholder-gray-400 focus:outline-none focus:border-[#2D5016] text-base"
+          className="w-full pl-12 pr-4 py-4 rounded-xl border border-[rgba(20,23,26,0.1)] bg-white text-[#14171A] placeholder-[#14171A]/30 focus:outline-none focus:border-[#3ECEC6] shadow-sm text-base transition-colors"
         />
       </div>
     </section>
