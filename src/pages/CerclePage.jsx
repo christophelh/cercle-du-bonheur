@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Monitor, Calendar, Users, CheckCircle, Shield } from 'lucide-react';
+import { MapPin, Monitor, Calendar, Users, CheckCircle, Shield } from 'lucide-react';
 import { cercles } from '../data/cercles';
 import { findCercleBySlug } from '../utils/slug';
 import CercleCard from '../components/CercleCard';
@@ -34,25 +34,6 @@ export default function CerclePage() {
 
   return (
     <div className="min-h-screen bg-[#F7F9FB]">
-      {/* Header */}
-      <div className="bg-white border-b border-[rgba(20,23,26,0.08)] px-4 py-4">
-        <div className="max-w-3xl mx-auto flex items-center justify-between">
-          <button
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-sm font-medium text-[#14171A]/60 hover:text-[#3ECEC6] transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Retour aux cercles
-          </button>
-          {cercle.verifie && (
-            <span className="flex items-center gap-1 text-xs text-[#3ECEC6] font-medium">
-              <CheckCircle className="w-4 h-4" />
-              Vérifié
-            </span>
-          )}
-        </div>
-      </div>
-
       <div className="max-w-3xl mx-auto px-4 py-10 space-y-8">
 
         {/* Titre */}
@@ -72,15 +53,24 @@ export default function CerclePage() {
             )}
           </div>
           <h1 className="text-3xl md:text-4xl font-medium text-[#14171A] mb-2">{cercle.nom}</h1>
-          <p className="text-[#14171A]/50 font-light">par {cercle.therapeute.nom}</p>
+          <div className="flex items-center gap-2">
+            <img
+              src={`https://randomuser.me/api/portraits/${cercle.therapeute.genre === 'femme' ? 'women' : 'men'}/${cercle.id % 50}.jpg`}
+              alt={cercle.therapeute.nom}
+              className="w-6 h-6 rounded-full"
+            />
+            <p className="text-[#14171A]/50 font-light">par {cercle.therapeute.nom}</p>
+          </div>
         </div>
 
         {/* Thérapeute */}
         <section className="bg-white rounded-xl p-6 border border-[rgba(20,23,26,0.08)] shadow-sm">
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-16 h-16 bg-[#3ECEC6] rounded-xl flex items-center justify-center text-white text-xl font-medium shrink-0 shadow-sm">
-              {cercle.therapeute.initiales}
-            </div>
+            <img
+              src={`https://randomuser.me/api/portraits/${cercle.therapeute.genre === 'femme' ? 'women' : 'men'}/${cercle.id % 50}.jpg`}
+              alt={cercle.therapeute.nom}
+              className="w-16 h-16 rounded-xl object-cover shrink-0 shadow-sm"
+            />
             <div>
               <p className="font-medium text-[#14171A] text-lg">{cercle.therapeute.nom}</p>
               <p className="text-sm font-light text-[#3ECEC6]">{cercle.therapeute.approche}</p>

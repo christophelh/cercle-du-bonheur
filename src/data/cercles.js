@@ -8,9 +8,11 @@ export const cercles = [
     prix: 35,
     prochaine_date: "2026-03-08",
     places_restantes: 3,
+    complet: false,
     verifie: true,
     therapeute: {
       nom: "Marc Dupont",
+      genre: "homme",
       initiales: "MD",
       bio: "Psychothérapeute et facilitateur de cercles d'hommes depuis 8 ans. Formé à la Process Communication et à la Gestalt.",
       approche: "Gestalt & Process Communication"
@@ -26,10 +28,12 @@ export const cercles = [
     format: "presentiel",
     prix: 40,
     prochaine_date: "2026-03-12",
-    places_restantes: 2,
+    places_restantes: 0,
+    complet: true,
     verifie: true,
     therapeute: {
       nom: "Sophie Renard",
+      genre: "femme",
       initiales: "SR",
       bio: "Thérapeute transpersonnelle et accompagnatrice des cycles féminins. 12 ans d'expérience dans les cercles de femmes et les rituels de passage.",
       approche: "Thérapie transpersonnelle & cycles féminins"
@@ -46,9 +50,11 @@ export const cercles = [
     prix: 30,
     prochaine_date: "2026-03-15",
     places_restantes: 5,
+    complet: false,
     verifie: true,
     therapeute: {
       nom: "Julien Moreau",
+      genre: "homme",
       initiales: "JM",
       bio: "Coach systémique et facilitateur de dialogue authentique. Formé à la Communication Non-Violente et aux pratiques contemplatives.",
       approche: "CNV & approche systémique"
@@ -64,10 +70,12 @@ export const cercles = [
     format: "visio",
     prix: 25,
     prochaine_date: "2026-03-10",
-    places_restantes: 4,
+    places_restantes: 0,
+    complet: true,
     verifie: true,
     therapeute: {
       nom: "Ahmed Bensalem",
+      genre: "homme",
       initiales: "AB",
       bio: "Psychologue clinicien spécialisé dans la parentalité masculine et les questions de transmission. Père de trois enfants.",
       approche: "Psychologie clinique & parentalité"
@@ -84,9 +92,11 @@ export const cercles = [
     prix: 35,
     prochaine_date: "2026-03-20",
     places_restantes: 6,
+    complet: false,
     verifie: true,
     therapeute: {
       nom: "Claire Fontaine",
+      genre: "femme",
       initiales: "CF",
       bio: "Thérapeute familiale et constellatrice. Spécialisée dans les questions de transmission transgénérationnelle et de réconciliation avec les lignées.",
       approche: "Constellations familiales & transgénérationnel"
@@ -102,15 +112,311 @@ export const cercles = [
     format: "presentiel",
     prix: 45,
     prochaine_date: "2026-03-22",
-    places_restantes: 2,
+    places_restantes: 0,
+    complet: true,
     verifie: true,
     therapeute: {
       nom: "Thomas Vidal",
+      genre: "homme",
       initiales: "TV",
       bio: "Psychothérapeute et guide de nature. Pratique les cercles en plein air depuis 6 ans, intégrant les éléments naturels comme support thérapeutique.",
       approche: "Écopsychologie & plein air"
     },
     charte: "La nature est notre co-facilitatrice. Respect de l'environnement, des êtres présents et du silence. Ce cercle demande une présence physique et une tenue adaptée.",
     description: "Cercle de parole mixte en forêt, aux pieds du Vercors. Une expérience unique qui mêle marche, silence et parole dans un cadre naturel exceptionnel."
+  },
+  {
+    id: 7,
+    nom: "Cercle des Guerriers — Nantes",
+    type: "hommes",
+    ville: "Nantes",
+    format: "presentiel",
+    prix: 30,
+    prochaine_date: "2026-03-14",
+    places_restantes: 4,
+    complet: false,
+    verifie: true,
+    therapeute: {
+      nom: "Pierre Lemaire",
+      genre: "homme",
+      initiales: "PL",
+      bio: "Thérapeute jungien et accompagnateur de rites de passage masculins. Formé à l'Institut Français de Psychologie Analytique.",
+      approche: "Psychologie jungienne & rites de passage"
+    },
+    charte: "Ce cercle s'appuie sur les archétypes masculins. Confidentialité totale, parole libre et respect de chacun. Les téléphones sont éteints pendant les séances.",
+    description: "Un espace pour les hommes qui souhaitent explorer leur puissance intérieure, leurs blessures et leur rapport à la communauté masculine. Séances mensuelles de 3h."
+  },
+  {
+    id: 8,
+    nom: "Lune Sacrée — Montpellier",
+    type: "femmes",
+    ville: "Montpellier",
+    format: "presentiel",
+    prix: 38,
+    prochaine_date: "2026-03-18",
+    places_restantes: 0,
+    complet: true,
+    verifie: true,
+    therapeute: {
+      nom: "Isabelle Caron",
+      genre: "femme",
+      initiales: "IC",
+      bio: "Psychologue clinicienne et facilitatrice de cercles féminins depuis 10 ans. Spécialisée dans la reconnexion au corps et aux cycles naturels.",
+      approche: "Psychologie somatique & cycles féminins"
+    },
+    charte: "Un espace de sororité profonde. Ce qui est partagé dans le cercle reste sacré. Chaque femme arrive telle qu'elle est, sans masque ni performance.",
+    description: "Cercle mensuel autour des cycles lunaires et féminins. Un espace de ressourcement, de célébration et de guérison collective pour les femmes de tout âge."
+  },
+  {
+    id: 9,
+    nom: "Cercle du Souffle — Nantes",
+    type: "mixte",
+    ville: "Nantes",
+    format: "presentiel",
+    prix: 32,
+    prochaine_date: "2026-03-25",
+    places_restantes: 7,
+    complet: false,
+    verifie: true,
+    therapeute: {
+      nom: "Léa Rousseau",
+      genre: "femme",
+      initiales: "LR",
+      bio: "Psychopraticienne et facilitatrice de groupes de parole. Formée à la respiration consciente et à la thérapie narrative.",
+      approche: "Respiration consciente & thérapie narrative"
+    },
+    charte: "La respiration est notre boussole. Ce cercle accueille toutes les émotions dans un cadre bienveillant et non-directif. Engagement sur 4 séances minimum.",
+    description: "Un cercle mixte qui intègre des pratiques de respiration consciente pour faciliter la parole. Idéal pour ceux qui ont du mal à verbaliser leurs émotions."
+  },
+  {
+    id: 10,
+    nom: "Cercle de l'Éveil — Montpellier",
+    type: "hommes",
+    ville: "Montpellier",
+    format: "presentiel",
+    prix: 40,
+    prochaine_date: "2026-03-11",
+    places_restantes: 0,
+    complet: true,
+    verifie: true,
+    therapeute: {
+      nom: "Karim Nassiri",
+      genre: "homme",
+      initiales: "KN",
+      bio: "Coach transpersonnel et facilitateur de retraites masculines. Formé en Inde et au Maroc aux pratiques contemplatives.",
+      approche: "Transpersonnel & pratiques contemplatives"
+    },
+    charte: "Ce cercle invite à un retour à l'essentiel. Silence, écoute et présence totale. Les téléphones et les montres sont laissés à l'entrée.",
+    description: "Un cercle d'hommes ancré dans les traditions contemplatives. Méditation, parole et silence alternent pour favoriser une connexion profonde à soi-même."
+  },
+  {
+    id: 11,
+    nom: "Racines & Ailes — Nantes",
+    type: "femmes",
+    ville: "Nantes",
+    format: "visio",
+    prix: 28,
+    prochaine_date: "2026-03-19",
+    places_restantes: 5,
+    complet: false,
+    verifie: true,
+    therapeute: {
+      nom: "Marie-Anne Petit",
+      genre: "femme",
+      initiales: "MP",
+      bio: "Thérapeute familiale systémique et constellatrice. Spécialisée dans les questions de maternité, de filiation et de transmission.",
+      approche: "Thérapie systémique & maternité"
+    },
+    charte: "Un espace pour les femmes en lien avec leur rôle de mère, de fille ou de sœur. Confidentialité et respect des récits personnels sont essentiels.",
+    description: "Cercle en visio pour les femmes qui souhaitent explorer leur rapport à la maternité et aux lignées féminines. Un espace de soutien et de transformation."
+  },
+  {
+    id: 12,
+    nom: "Cercle du Corps — Montpellier",
+    type: "mixte",
+    ville: "Montpellier",
+    format: "presentiel",
+    prix: 42,
+    prochaine_date: "2026-03-28",
+    places_restantes: 0,
+    complet: true,
+    verifie: true,
+    therapeute: {
+      nom: "Sandrine Fabre",
+      genre: "femme",
+      initiales: "SF",
+      bio: "Psychomotricienne et thérapeute corporelle. 15 ans d'expérience dans l'accompagnement des troubles psychosomatiques et du stress.",
+      approche: "Thérapie psychocorporelle"
+    },
+    charte: "Le corps est notre premier langage. Ce cercle intègre des pratiques corporelles douces. Tenue confortable requise. Ouvert aux personnes sans expérience préalable.",
+    description: "Un cercle mixte qui lie parole et mouvement pour favoriser la libération émotionnelle. Chaque séance alterne temps de mouvement libre et temps de parole."
+  },
+  {
+    id: 13,
+    nom: "Cercle des Pionniers — Marseille",
+    type: "hommes",
+    ville: "Marseille",
+    format: "presentiel",
+    prix: 30,
+    prochaine_date: "2026-04-02",
+    places_restantes: 6,
+    complet: false,
+    verifie: true,
+    therapeute: {
+      nom: "Yann Berthier",
+      genre: "homme",
+      initiales: "YB",
+      bio: "Psychologue clinicien et ancien militaire reconverti dans l'accompagnement thérapeutique. Spécialisé dans les transitions de vie masculine.",
+      approche: "Psychologie clinique & transitions de vie"
+    },
+    charte: "Ce cercle accueille les hommes en période de transition : divorce, reconversion, paternité, deuil. Confidentialité absolue et solidarité entre membres.",
+    description: "Un espace pour les hommes qui traversent des moments de rupture ou de transformation. Un lieu de parole sans jugement, ancré dans la solidarité masculine."
+  },
+  {
+    id: 14,
+    nom: "Cercle des Saisons — Rennes",
+    type: "femmes",
+    ville: "Rennes",
+    format: "presentiel",
+    prix: 33,
+    prochaine_date: "2026-03-21",
+    places_restantes: 0,
+    complet: true,
+    verifie: true,
+    therapeute: {
+      nom: "Hélène Dumont",
+      genre: "femme",
+      initiales: "HD",
+      bio: "Art-thérapeute et facilitatrice de cercles féminins. Utilise la création comme vecteur d'expression et de guérison depuis 9 ans.",
+      approche: "Art-thérapie & cercles féminins"
+    },
+    charte: "Chaque séance suit un thème lié aux saisons et aux cycles naturels. La création est libre, sans jugement esthétique. La parole accompagne le geste.",
+    description: "Un cercle féminin qui intègre l'art-thérapie comme outil d'exploration. Peinture, argile ou écriture selon les séances. Aucun talent artistique requis."
+  },
+  {
+    id: 15,
+    nom: "Cercle de la Rivière — Strasbourg",
+    type: "mixte",
+    ville: "Strasbourg",
+    format: "presentiel",
+    prix: 36,
+    prochaine_date: "2026-04-05",
+    places_restantes: 8,
+    complet: false,
+    verifie: true,
+    therapeute: {
+      nom: "Éric Wolff",
+      genre: "homme",
+      initiales: "EW",
+      bio: "Psychanalyste et superviseur de groupes de parole. Formé à l'École de la Cause Freudienne. 20 ans de pratique clinique.",
+      approche: "Psychanalyse & groupe de parole"
+    },
+    charte: "Ce cercle s'inscrit dans une tradition analytique ouverte. La parole est libre, les associations bienvenues. Engagement sur 6 séances pour garantir la profondeur du travail.",
+    description: "Un cercle mixte d'inspiration analytique pour ceux qui souhaitent explorer leur monde intérieur avec rigueur et profondeur. Séances bimensuelles."
+  },
+  {
+    id: 16,
+    nom: "Cercle Solstice — Lille",
+    type: "hommes",
+    ville: "Lille",
+    format: "visio",
+    prix: 22,
+    prochaine_date: "2026-03-17",
+    places_restantes: 0,
+    complet: true,
+    verifie: true,
+    therapeute: {
+      nom: "Benoît Marchand",
+      genre: "homme",
+      initiales: "BM",
+      bio: "Coach et thérapeute spécialisé dans la masculinité consciente et le leadership intérieur. Formé au modèle MKP (Mankind Project).",
+      approche: "Masculinité consciente & MKP"
+    },
+    charte: "Ce cercle s'appuie sur les principes du Mankind Project. Responsabilité personnelle, intégrité et service aux autres sont les valeurs centrales.",
+    description: "Groupe de parole en visio pour les hommes qui souhaitent développer un leadership intérieur ancré dans l'authenticité et la responsabilité."
+  },
+  {
+    id: 17,
+    nom: "Cercle de la Clairière — Rennes",
+    type: "mixte",
+    ville: "Rennes",
+    format: "presentiel",
+    prix: 28,
+    prochaine_date: "2026-04-08",
+    places_restantes: 9,
+    complet: false,
+    verifie: true,
+    therapeute: {
+      nom: "Amandine Leroy",
+      genre: "femme",
+      initiales: "AL",
+      bio: "Psychologue humaniste et facilitatrice de processus de groupe. Formée à l'approche centrée sur la personne de Carl Rogers.",
+      approche: "Approche centrée sur la personne (Rogers)"
+    },
+    charte: "Ce cercle repose sur la confiance en la sagesse de chaque personne. L'écoute active et l'empathie sont les piliers de notre pratique collective.",
+    description: "Un espace mixte d'exploration de soi à travers la parole et l'écoute profonde. Accessible à tous, débutants comme expérimentés."
+  },
+  {
+    id: 18,
+    nom: "Cercle du Phénix — Marseille",
+    type: "femmes",
+    ville: "Marseille",
+    format: "visio",
+    prix: 30,
+    prochaine_date: "2026-03-26",
+    places_restantes: 0,
+    complet: true,
+    verifie: true,
+    therapeute: {
+      nom: "Fatima Benali",
+      genre: "femme",
+      initiales: "FB",
+      bio: "Psychologue et militante pour la santé mentale des femmes. Spécialisée dans l'accompagnement des femmes issues de cultures diverses.",
+      approche: "Psychologie interculturelle & féminisme"
+    },
+    charte: "Ce cercle est un espace safe pour toutes les femmes, quelles que soient leurs origines. La diversité est célébrée. Zéro tolérance pour toute forme de discrimination.",
+    description: "Cercle en visio pour les femmes qui souhaitent explorer leur identité, leurs forces et leurs défis dans un cadre interculturel et bienveillant."
+  },
+  {
+    id: 19,
+    nom: "Cercle du Chêne — Strasbourg",
+    type: "hommes",
+    ville: "Strasbourg",
+    format: "presentiel",
+    prix: 38,
+    prochaine_date: "2026-04-01",
+    places_restantes: 3,
+    complet: false,
+    verifie: true,
+    therapeute: {
+      nom: "Matthieu Roth",
+      genre: "homme",
+      initiales: "MR",
+      bio: "Thérapeute familial et accompagnateur de cercles d'hommes depuis 12 ans. Formé à la thérapie narrative et aux approches post-modernes.",
+      approche: "Thérapie narrative & post-moderne"
+    },
+    charte: "Ce cercle invite les hommes à raconter et réécrire leur histoire. La parole est un acte de création. Confidentialité et respect mutuel sont fondamentaux.",
+    description: "Un cercle d'hommes qui utilise la narration comme outil de transformation. Chaque participant est invité à raconter des fragments de son histoire pour mieux la comprendre."
+  },
+  {
+    id: 20,
+    nom: "Cercle Aurore — Lille",
+    type: "femmes",
+    ville: "Lille",
+    format: "presentiel",
+    prix: 25,
+    prochaine_date: "2026-04-10",
+    places_restantes: 0,
+    complet: true,
+    verifie: true,
+    therapeute: {
+      nom: "Nathalie Cousin",
+      genre: "femme",
+      initiales: "NC",
+      bio: "Infirmière reconvertie en psychothérapeute. Spécialisée dans l'accompagnement du burn-out, de l'épuisement maternel et des transitions de vie féminine.",
+      approche: "Psychothérapie & burn-out féminin"
+    },
+    charte: "Ce cercle est un espace de repos et de reconstruction. Aucune performance attendue. Chaque femme arrive avec ce qu'elle est, pas ce qu'elle fait.",
+    description: "Un cercle pour les femmes épuisées, en transition ou en reconstruction. Un espace de douceur, de soutien mutuel et de reconnexion à ses propres ressources."
   }
 ];

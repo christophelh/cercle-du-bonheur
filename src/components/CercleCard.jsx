@@ -42,7 +42,14 @@ export default function CercleCard({ cercle }) {
         }`}>
           {cercle.nom}
         </h2>
-        <p className="text-sm font-light text-[#14171A]/50 mb-4">par {cercle.therapeute.nom}</p>
+        <div className="flex items-center gap-2 mb-4">
+          <img
+            src={`https://randomuser.me/api/portraits/${cercle.therapeute.genre === 'femme' ? 'women' : 'men'}/${cercle.id % 50}.jpg`}
+            alt={cercle.therapeute.nom}
+            className="w-7 h-7 rounded-full bg-[#3ECEC6]/10"
+          />
+          <p className="text-sm font-light text-[#14171A]/50">par {cercle.therapeute.nom}</p>
+        </div>
 
         <div className="space-y-2 text-sm text-[#14171A]/60 font-light">
           <div className="flex items-center gap-2">
